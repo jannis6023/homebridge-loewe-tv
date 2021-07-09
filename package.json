@@ -1,0 +1,32 @@
+{
+  "name": "homebridge-loewe-tv",
+  "version": "2.2.2",
+  "description": "Homebridge plugin for Loewe TVs",
+  "main": "index.js",
+  "engines": {
+    "node": ">=12.9.0",
+    "homebridge": ">=1.0.0"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "homebridge",
+    "loewetv",
+    "loewe",
+    "homekit"
+  ],
+  "author": "jannis6023",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "fast-xml-parser": "^3.19.0",
+    "tcp-ping": "^0.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jannis6023/homebridge-loewe-tv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jannis6023/homebridge-loewe-tv/issues"
+  },
+  "homepage": "https://github.com/jannis6023/homebridge-loewe-tv"
+}
