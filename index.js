@@ -60,6 +60,30 @@ class HomebridgeLoewetvPlugin {
           // the value will be the value you set for the Identifier Characteristic
           // on the Input Source service that was selected - see input sources below.
 
+          if(newValue === 1){
+            // HDMI 1
+            let that = this;
+            this.loewe.auth(function (clientID){
+              that.loewe.injectRCKey(clientID, "119")
+            })
+          }
+
+          if(newValue === 2){
+            // HDMI 2
+            let that = this;
+            this.loewe.auth(function (clientID){
+              that.loewe.injectRCKey(clientID, "121")
+            })
+          }
+
+          if(newValue === 3){
+            // TV
+            let that = this;
+            this.loewe.auth(function (clientID){
+              that.loewe.injectRCKey(clientID, "72")
+            })
+          }
+
           this.log.info('set Active Identifier => setNewValue: ' + newValue);
         });
 
