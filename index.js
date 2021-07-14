@@ -45,9 +45,19 @@ class HomebridgeLoewetvPlugin {
         .onSet((newValue) => {
           this.log.info('set Active => setNewValue: ' + newValue);
           let that = this;
-          this.loewe.auth(function (clientID){
-            that.loewe.injectRCKey(clientID, "12")
-          })
+
+          if(newValue === 1){
+            this.loewe.auth(function (clientID){
+              that.loewe.injectRCKey(clientID, "22")
+            })
+          }
+
+          if(newValue === 0){
+            this.loewe.auth(function (clientID){
+              that.loewe.injectRCKey(clientID, "25")
+            })
+          }
+
           tvService.updateCharacteristic(this.Characteristic.Active, 1);
         });
 
